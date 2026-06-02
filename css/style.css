@@ -1,0 +1,213 @@
+/* The Vaaldrun Saga - static site stylesheet */
+:root {
+  --bg: #0f1115;
+  --topbar: #151922;
+  --sidebar: #161a22;
+  --sidebar-button: #202633;
+  --sidebar-button-hover: #2a3242;
+  --paper: #181d26;
+  --paper-soft: #1e2530;
+  --text: #eef3f7;
+  --muted: #aeb8c5;
+  --faint: #7f8b9a;
+  --accent: #7dd3c7;
+  --accent-strong: #9ae6dc;
+  --border: #2b3342;
+  --shadow: rgba(0,0,0,.35);
+  --max: 920px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(125,211,199,.08), transparent 28rem),
+    linear-gradient(180deg, #0f1115 0%, #12161d 100%);
+  color: var(--text);
+  line-height: 1.7;
+}
+a { color: var(--accent-strong); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 76px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 28px;
+  background: rgba(21,25,34,.96);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px var(--shadow);
+  backdrop-filter: blur(8px);
+}
+.site-title {
+  color: var(--text);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.site-title:hover { text-decoration: none; color: var(--accent-strong); }
+.site-motto {
+  color: var(--muted);
+  font-size: .95rem;
+  letter-spacing: .04em;
+}
+.shell { display: flex; min-height: 100vh; padding-top: 76px; }
+.sidebar {
+  position: fixed;
+  top: 76px;
+  bottom: 0;
+  left: 0;
+  width: 190px;
+  padding: 18px 14px;
+  background: rgba(22,26,34,.98);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+.nav { display: flex; flex-direction: column; gap: 10px; }
+.nav-button {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--sidebar-button);
+  color: var(--text);
+  font-weight: 700;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+}
+.nav-button:hover {
+  background: var(--sidebar-button-hover);
+  color: var(--accent-strong);
+  text-decoration: none;
+  border-color: rgba(125,211,199,.45);
+}
+.content {
+  margin-left: 190px;
+  width: calc(100% - 190px);
+  padding: 42px 26px 70px;
+}
+.article {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 38px 42px;
+  background: rgba(24,29,38,.88);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 20px 70px var(--shadow);
+}
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -.04em;
+}
+h2 {
+  margin-top: 42px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+h3 { margin-top: 26px; }
+p { margin: 0 0 1.1rem; }
+p.lead {
+  font-size: 1.22rem;
+  color: var(--muted);
+  max-width: 760px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.card {
+  background: var(--paper-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+}
+.card h3 { margin-top: 0; }
+.button-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0; }
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #06110f;
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+.button:hover { text-decoration: none; filter: brightness(1.08); }
+.button.secondary {
+  background: var(--paper-soft);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.meta { color: var(--faint); font-size: .92rem; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { border-bottom: 1px solid var(--border); padding: 12px; text-align: left; }
+th { color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 32px 0; }
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 10px 0 10px 18px;
+  color: var(--muted);
+  margin: 28px 0;
+  background: rgba(125,211,199,.05);
+  border-radius: 0 12px 12px 0;
+}
+.footer { color: var(--faint); font-size: .88rem; margin-top: 60px; }
+@media (max-width: 820px) {
+  .topbar { height: auto; min-height: 76px; flex-direction: column; align-items: flex-start; justify-content: center; padding: 14px 18px; }
+  .site-title { font-size: 1.15rem; }
+  .site-motto { font-size: .85rem; }
+  .shell { display: block; padding-top: 100px; }
+  .sidebar {
+    position: sticky;
+    top: 100px;
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 12px;
+    z-index: 8;
+  }
+  .nav { flex-direction: row; overflow-x: auto; padding-bottom: 2px; }
+  .nav-button { min-width: 120px; }
+  .content { margin-left: 0; width: 100%; padding: 22px 14px 48px; }
+  .article { padding: 26px 20px; border-radius: 18px; }
+}
+
+.legal-footer {
+  margin-top: 54px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--faint);
+  font-size: .88rem;
+}
+ul {
+  margin: 0 0 1.2rem 1.2rem;
+  padding: 0;
+}
+li { margin-bottom: .45rem; }
+
+.hero { padding-bottom: 8px; }
+.hook { margin: 26px 0 8px; padding: 18px 20px; border: 1px solid rgba(125,211,199,.22); border-radius: 16px; background: rgba(125,211,199,.06); }
+.hook p { margin-bottom: .65rem; font-size: 1.08rem; }
+.hero-buttons { margin-top: 24px; }
+.button.big { font-size: 1.08rem; padding: 14px 22px; text-transform: uppercase; letter-spacing: .04em; }
+.status-panel, .opipanel { margin-top: 36px; }
+.status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 18px; }
+.status-card { background: var(--paper-soft); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+.status-card h3 { margin-top: 0; }
+.opipanel { padding: 22px; border: 1px solid rgba(125,211,199,.22); border-radius: 18px; background: rgba(30,37,48,.72); }
+.sidebar-motto { margin-top: 22px; padding: 14px 10px; color: var(--muted); font-size: .82rem; text-align: center; border-top: 1px solid var(--border); }
+.sidebar-motto strong { display: block; color: var(--accent-strong); letter-spacing: .14em; margin-bottom: 6px; }
+.sidebar-motto span { display: block; line-height: 1.45; }
