@@ -1,10 +1,9 @@
-VaalDrun static site v11
+VaalDrun static site v13
 
 Changes in this version:
-- Restored the original large cover-art images for the website.
-- Removed the 400x600 cover-art sizing/cropping from the website.
-- Kept the corrected ODT-based Book 1 reader with tighter web-novel line spacing.
-- Kept Donate page/button and PayPal email: elias.mercer@mail.com.
+- Replaced Book 1 Part 1 reader with the newest corrected ODT manuscript.
+- Kept the tighter web-novel line spacing.
+- Rebuilt the PDF download from the corrected ODT.
+- Kept the large original cover art files for the website.
 
-Upload the contents of this folder to GitHub, replacing the previous files.
-Vercel should redeploy automatically.
+Upload the contents of this folder to GitHub. Vercel will redeploy automatically.
