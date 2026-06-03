@@ -373,13 +373,19 @@ li { margin-bottom: .45rem; }
 }
 .toc ol { margin-bottom: 0; }
 .toc li { margin: .35rem 0; }
+/* Full-resolution artwork display: do not crop or force book-cover dimensions. */
 .cover-preview img,
 .cover-grid img,
 .art-image img {
-  max-width: 400px;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 14px;
+}
+.cover-preview {
+  max-width: 1100px;
+}
+.cover-full {
+  max-width: 1500px;
 }
