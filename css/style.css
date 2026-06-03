@@ -1,4 +1,4 @@
-/* The Vaaldrun Saga - static site stylesheet */
+/* The VaalDrun Saga - static site stylesheet */
 :root {
   --bg: #0f1115;
   --topbar: #151922;
@@ -211,3 +211,78 @@ li { margin-bottom: .45rem; }
 .sidebar-motto { margin-top: 22px; padding: 14px 10px; color: var(--muted); font-size: .82rem; text-align: center; border-top: 1px solid var(--border); }
 .sidebar-motto strong { display: block; color: var(--accent-strong); letter-spacing: .14em; margin-bottom: 6px; }
 .sidebar-motto span { display: block; line-height: 1.45; }
+
+
+.reader-panel {
+  margin-top: 36px;
+  padding: 22px;
+  border: 1px solid rgba(125,211,199,.22);
+  border-radius: 18px;
+  background: rgba(30,37,48,.72);
+}
+.reader-count {
+  display: inline-block;
+  min-width: 120px;
+  padding: 10px 18px;
+  margin: 8px 0 12px;
+  border-radius: 14px;
+  background: rgba(125,211,199,.09);
+  border: 1px solid rgba(125,211,199,.28);
+  color: var(--accent-strong);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-align: center;
+}
+.download-card {
+  margin: 24px 0;
+  padding: 22px;
+  border: 1px solid rgba(125,211,199,.22);
+  border-radius: 18px;
+  background: rgba(30,37,48,.72);
+}
+.download-card h2 { margin-top: 0; }
+.button.disabled {
+  background: #303746;
+  color: var(--faint);
+  border: 1px solid var(--border);
+  cursor: not-allowed;
+}
+.button.disabled:hover { filter: none; text-decoration: none; }
+
+
+/* Reading page additions */
+.reading { max-width: 980px; }
+.book-title-block { margin-bottom: 32px; }
+.book-title-block h1 { margin-bottom: 8px; }
+.book-subtitle { color: var(--accent-strong); font-size: 1.4rem; font-weight: 700; }
+.toc {
+  margin: 24px 0 36px;
+  padding: 18px 22px;
+  background: var(--paper-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.toc summary { cursor: pointer; font-weight: 800; color: var(--accent-strong); }
+.toc ol { columns: 2; column-gap: 36px; padding-left: 20px; }
+.toc li { break-inside: avoid; margin: 5px 0; }
+.toc-vignette { font-size: .92rem; color: var(--muted); }
+.book-text { font-size: 1.06rem; }
+.book-text h2 { margin-top: 56px; font-size: 2rem; color: var(--accent-strong); }
+.book-text h3 { margin-top: 44px; color: var(--accent-strong); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+.book-text p { margin-bottom: 1.15rem; }
+.download-card {
+  background: var(--paper-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 24px 0;
+}
+.button.disabled {
+  background: #3a3f49;
+  color: var(--faint);
+  cursor: not-allowed;
+}
+@media (max-width: 760px) {
+  .toc ol { columns: 1; }
+}
