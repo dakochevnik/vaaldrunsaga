@@ -7,3 +7,6 @@ Changes in this version:
 - Kept the large original cover art files for the website.
 
 Upload the contents of this folder to GitHub. Vercel will redeploy automatically.
+
+
+Update: internal folder renamed to vaaldrun_static_site. Added starter Character Encyclopedia, Universe Encyclopedia entries, and Timeline pages.
