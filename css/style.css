@@ -398,3 +398,6 @@ li { margin-bottom: .45rem; }
 .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 24px 0; }
 .badge { display:inline-block; padding: 3px 8px; border:1px solid var(--border); border-radius: 999px; color: var(--muted); font-size:.8rem; margin-bottom:8px; }
 .entry-meta { color: var(--muted); font-size: .95rem; margin-bottom: 1.2rem; }
+
+.chapter-nav { display:flex; gap:12px; justify-content:space-between; align-items:center; flex-wrap:wrap; margin:18px 0; }
+.chapter-nav span { min-width:120px; }
